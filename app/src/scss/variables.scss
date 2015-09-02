@@ -1,0 +1,40 @@
+/*Variables*/
+
+/*grid*/
+$grid-gutter: 2px; // spacing between columns
+$grid-columns: 8; // columns qty
+$grid-max: 980px; // container width
+
+/*fonts*/
+$font_family: sans-serif;
+$font_size: small;
+
+/*colors*/
+$background_first_color: #f5f8fb; 
+$background_last_color: #ffffff;
+
+$color_pending : #8b8d97;
+$pending_border_color : #cacccd;
+$pending_border_color_shadow : #e7e9ec;
+$pending_background_first_color: #edf2fa;
+
+$color_running : #1d2d58;
+$running_border_color : #427fb3;
+$running_border_color_shadow : #ccdceb;
+$running_background_first_color: $pending_background_first_color;
+
+$color_completed : #496547;
+$completed_border_color : #548039;
+$completed_border_color_shadow : #d2e1cd;
+$completed_background_first_color: #f1f5f0;
+
+$color_rejected : #c52b38;
+$rejected_border_color : #be0712;
+$rejected_border_color_shadow : #e8bbc0;
+$rejected_background_first_color: #fbe3e3;
+
+$progress_bar_border_color: #c7c7c7;
+$progress_bar_inner_color: #d8d8d8;
+$progress_bar_color: #5e9cd3;
+$progress_bar_completed_color: $completed_border_color;
+$progress_bar_rejected_color: $rejected_border_color;

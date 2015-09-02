@@ -1,0 +1,60 @@
+* {
+    box-sizing: border-box;
+}
+
+[class*="grid-"] {
+  float: left;
+  padding: 0 $grid-gutter;
+  margin-bottom: 10px;
+}
+
+@for $i from 1 through $grid-columns {
+  .grid-#{$i} {
+    width: 100% / $grid-columns * $i;
+  }
+}
+
+body {
+	background: -webkit-radial-gradient(top left, $background_first_color, $background_last_color);	
+	background: radial-gradient(at top left, $background_first_color, $background_last_color);
+	font-family: $font_family;
+	font-size: $font_size;
+}
+
+progress[value] {
+  width: 40px;
+  height: 25px;
+  border: solid 1px $progress_bar_border_color;
+  position: relative;
+  bottom: 6px;
+}
+
+progress,                          /* Firefox  */ 
+progress[role][aria-valuenow] {    /* Polyfill */
+   background: $progress_bar_inner_color !important; /* !important is needed by the polyfill */
+}
+
+/* Chrome */
+progress::-webkit-progress-bar {
+    background: $progress_bar_inner_color;
+}
+
+/* IE10 */
+progress {
+    color: $progress_bar_color;
+}
+
+/* Firefox */
+progress::-moz-progress-bar { 
+    background: $progress_bar_color;	
+}
+
+/* Chrome */
+progress::-webkit-progress-value {
+    background: $progress_bar_color;
+}
+
+/* Polyfill */
+progress[aria-valuenow]:before  {
+    background: $progress_bar_color;
+}

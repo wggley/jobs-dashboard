@@ -1,0 +1,77 @@
+.changelist {
+	text-align: center;
+	margin: 10px;
+	.header {
+		margin-bottom: 10px;
+	}
+	.build {
+		text-align: left;
+	}
+	.build .icon {
+		position: relative;
+    	bottom: 7px;
+	}
+	.build .machine-name {
+		vertical-align: top;
+    	padding-left: 10px;
+	}
+	.row {
+		height: 35px;
+    	padding-top: 9px;
+	}
+	.pending {
+		@include border-row($pending_border_color, $pending_border_color_shadow, $pending_background_first_color, $color_pending);	
+	}
+	.running {
+		@include border-row($running_border_color, $running_border_color_shadow, $running_background_first_color, $color_running);
+	}
+	.complete, .accepted {
+		@include border-row($completed_border_color, $completed_border_color_shadow, $completed_background_first_color, $color_completed);
+	}
+	.rejected {
+		@include border-row($rejected_border_color, $rejected_border_color_shadow, $rejected_background_first_color, $color_rejected);	
+	}
+
+	progress[value] {
+		@include border-shadow($progress_bar_border_color, $pending_border_color_shadow);
+	}
+	/* IE10 */
+	progress.complete {
+	   	color: $progress_bar_completed_color;
+	}
+
+	/* Firefox */
+	progress.complete::-moz-progress-bar {
+	    background: $progress_bar_completed_color;	
+	}
+
+	/* Chrome */
+	progress.complete::-webkit-progress-value{
+		background: $progress_bar_completed_color;
+	}
+
+	/* Polyfill */
+	progress[aria-valuenow].complete:before {
+		background: $progress_bar_completed_color;
+	}
+
+	/* IE10 */
+	progress.rejected {
+	   	color: $progress_bar_rejected_color;
+	}
+
+	/* Firefox */
+	progress.rejected::-moz-progress-bar {
+	    background: $progress_bar_rejected_color;	
+	}
+
+	/* Chrome */
+	progress.rejected::-webkit-progress-value{
+		background: $progress_bar_rejected_color;
+	}
+
+	/* Polyfill */
+	progress[aria-valuenow].rejected:before {
+		background: $progress_bar_rejected_color;
+	}
+}

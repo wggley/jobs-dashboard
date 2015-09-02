@@ -1,0 +1,62 @@
+.arrow_green_up, .arrow_red_down, .arrow_yellow_right, .brick_blue, .brick_green, .brick_red, .computer_blue, .computer_green, .computer_grey{
+	background: url(../img/sprites.png) no-repeat;
+}
+
+span.arrow_green_up, span.arrow_red_down, span.arrow_yellow_right, span.brick_blue, span.brick_green, span.brick_red, span.computer_blue, span.computer_green, span.computer_grey{
+	display: inline-block;
+}
+
+.arrow_green_up{
+	background-position: 0 0;
+	width: 49px;
+	height: 54px;
+}
+
+.arrow_red_down{
+	background-position: -55px 0;
+	width: 50px;
+	height: 55px;
+}
+
+.arrow_yellow_right{
+	background-position: -116px 0;
+	width: 54px;
+	height: 50px;
+}
+
+.brick_blue{
+	background-position: -179px -13px ;
+	width: 30px;
+	height: 24px;
+}
+
+.brick_green{
+	background-position: -223px -13px ;
+	width: 31px;
+	height: 25px;
+}
+
+.brick_red{
+	background-position: -267px -14px ;
+	width: 29px;
+	height: 24px;
+}
+
+.computer_blue{
+	background-position: -307px 0;
+	width: 66px;
+	height: 60px;
+}
+
+.computer_green{
+	background-position: -392px -10px ;
+	width: 30px;
+	height: 26px;
+}
+
+.computer_grey{
+	background-position: -435px -11px ;
+	width: 30px;
+	height: 27px;
+}
+

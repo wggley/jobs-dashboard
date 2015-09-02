@@ -1,0 +1,52 @@
+<html ng-app="crossOverApp">
+<head>
+	<title>CrossOver Sr. Front End Developer Test </title>
+	<script src="js/angular.min.js"></script>
+	<script src="js/app.js"></script>
+	<link rel="stylesheet" type="text/css" href="../assets/css/styles.css">
+</head>
+<body ng-controller="crossOverController as controller">
+	<section class="changelist">
+		<div class="header">
+			<span class="grid-1 build">Changelist / Build</span>
+			<span class="grid-1">Owner</span>
+			<span class="grid-1">Time Started</span>
+			<span class="grid-1">State</span>
+			<span class="grid-1">Metrics</span>
+			<span class="grid-1">Build</span>
+			<span class="grid-1">Unit Test</span>
+			<span class="grid-1">Functional Test</span>
+		</div>
+		
+		<div class="grid-8 row {{changes.status}}" ng-repeat="changes in controller.data">
+			<div ng-if="changes.type == 'change'">
+				<div class="grid-2 build" >
+					<span class="icon {{validateProcessType(changes)}}"></span>
+					<span class="machine-name">{{changes.run}}</span>
+				</div>
+			</div>
+			<div ng-if="changes.type == 'build'">
+				<div class="grid-1 build">
+					<span class="icon {{validateProcessType(changes)}}"></span>
+					<span class="machine-name">{{changes.run}}</span>				
+				</div>
+				<span class="grid-1">{{changes.owner}}</span>
+			</div>			
+			<span class="grid-1">{{changes.time_started}}</span>
+			<span class="grid-1">{{changes.status | capitalize}}</span>
+			<div class="grid-1">
+				<progress class="{{changes.metrics.status}}" max="{{changes.metrics.max}}" value="{{changes.metrics.value}}"></progress>
+			</div>
+			<div class="grid-1">
+				<progress class="{{changes.build.status}}" max="{{changes.build.max}}" value="{{changes.build.value}}"></progress>
+			</div>
+			<div class="grid-1">
+				<progress class="{{changes.unit_tests.status}}" max="{{changes.unit_tests.max}}" value="{{changes.unit_tests.value}}"></progress>
+			</div>
+			<div class="grid-1">
+				<progress class="{{changes.functional_tests.status}}" max="{{changes.functional_tests.max}}" value="{{changes.functional_tests.value}}"></progress>
+			</div>
+		</div>
+	</section>	
+</body>
+</html>
