@@ -2,6 +2,7 @@
   -webkit-border-radius: $radius;
      -moz-border-radius: $radius;
       -ms-border-radius: $radius;
+       -o-border-radius: $radius;
           border-radius: $radius;
 }
 
@@ -9,6 +10,7 @@
   word-break:     break-word;
   -webkit-hyphens: auto;
   -moz-hyphens:    auto;
+  -o-hyphens:    auto;
   hyphens:         auto;
 }
 
@@ -19,7 +21,10 @@
 }
 
 @mixin transition($transition) {
-  -webkit-transition: $transition; /* Safari */
+    -webkit-transition: $transition;
+    -moz-transition: $transition;
+    -o-transition: $transition;
+    -ms-transition: $transition;
     transition: width $transition;
 }
 
@@ -35,11 +40,17 @@
 }
 
 @mixin radial-gradient($direction, $first_color, $last_color) {
-  background: -webkit-radial-gradient($direction, $first_color, $last_color);  
+  background: -webkit-radial-gradient($direction, $first_color, $last_color);
+  background: -moz-radial-gradient($direction, $first_color, $last_color);
+  background: -o-radial-gradient($direction, $first_color, $last_color);
+  background: -ms-radial-gradient($direction, $first_color, $last_color);
   background: radial-gradient(at $direction, $first_color, $last_color);
 }
  
 @mixin linear-gradient-left($first_color, $last_color) {
   background: -webkit-linear-gradient(left, $first_color, $last_color);  
+  background: -moz-linear-gradient(left, $first_color, $last_color);  
+  background: -o-linear-gradient(left, $first_color, $last_color);
+  background: -ms-linear-gradient(left, $first_color, $last_color);
   background: linear-gradient(right, $first_color, $last_color);
 }

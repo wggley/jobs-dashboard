@@ -59,6 +59,8 @@ progress[role] {
   appearance: none;
   -moz-appearance: none;
   -webkit-appearance: none;
+  -o-appearance: none;
+  -ms-appearance: none;
   /* gets rid of default border in Firefox and Opera. */
   border: none;
   /* Needs to be in here for Safari polyfill so background images work as expected. */
@@ -252,7 +254,9 @@ progress[aria-valuenow]:before {
 /* The starting CSS styles for the enter animation */
 .fade.ng-enter {
   -webkit-transition: 0.5s linear all;
-  /* Safari */
+  -moz-transition: 0.5s linear all;
+  -o-transition: 0.5s linear all;
+  -ms-transition: 0.5s linear all;
   transition: width 0.5s linear all;
   opacity: 0;
 }
@@ -268,7 +272,9 @@ progress[aria-valuenow]:before {
 
 .fade.ng-hide {
   -webkit-transition: 0.01s linear all;
-  /* Safari */
+  -moz-transition: 0.01s linear all;
+  -o-transition: 0.01s linear all;
+  -ms-transition: 0.01s linear all;
   transition: width 0.01s linear all;
   opacity: 0;
 }
@@ -319,12 +325,18 @@ progress[aria-valuenow]:before {
 .square.complete, .square.accepted {
   border: solid 3px #496547;
   background: -webkit-radial-gradient(top left, #d2e1cd, white);
+  background: -moz-radial-gradient(top left, #d2e1cd, white);
+  background: -o-radial-gradient(top left, #d2e1cd, white);
+  background: -ms-radial-gradient(top left, #d2e1cd, white);
   background: radial-gradient(at top left at top left, #d2e1cd, #ffffff);
 }
 
 .square.rejected {
   border: solid 3px #c52b38;
   background: -webkit-radial-gradient(top left, #feebeb, white);
+  background: -moz-radial-gradient(top left, #feebeb, white);
+  background: -o-radial-gradient(top left, #feebeb, white);
+  background: -ms-radial-gradient(top left, #feebeb, white);
   background: radial-gradient(at top left at top left, #feebeb, #ffffff);
 }
 
@@ -489,6 +501,9 @@ progress[aria-valuenow].rejected:before {
   color: #427fb3;
   border: solid 1px #427fb3;
   background: -webkit-radial-gradient(left top, #ccdceb, white);
+  background: -moz-radial-gradient(left top, #ccdceb, white);
+  background: -o-radial-gradient(left top, #ccdceb, white);
+  background: -ms-radial-gradient(left top, #ccdceb, white);
   background: radial-gradient(at left top at left top, #ccdceb, #ffffff);
 }
 
@@ -499,14 +514,18 @@ progress[aria-valuenow].rejected:before {
 
 .compressed {
   -webkit-transition: 0.05s linear all;
-  /* Safari */
+  -moz-transition: 0.05s linear all;
+  -o-transition: 0.05s linear all;
+  -ms-transition: 0.05s linear all;
   transition: width 0.05s linear all;
 }
 
 .expanded {
   height: 265px;
   -webkit-transition: 0.05s linear all;
-  /* Safari */
+  -moz-transition: 0.05s linear all;
+  -o-transition: 0.05s linear all;
+  -ms-transition: 0.05s linear all;
   transition: width 0.05s linear all;
 }
 
@@ -514,6 +533,9 @@ progress[aria-valuenow].rejected:before {
   border: solid 2px #cacccd;
   box-shadow: 1px 1px 1px #e7e9ec, -1px 1px 1px #e7e9ec;
   background: -webkit-radial-gradient(top left, #edf2fa, #ffffff);
+  background: -moz-radial-gradient(top left, #edf2fa, #ffffff);
+  background: -o-radial-gradient(top left, #edf2fa, #ffffff);
+  background: -ms-radial-gradient(top left, #edf2fa, #ffffff);
   background: radial-gradient(at top left at top left, #edf2fa, #ffffff);
   color: #8b8d97;
 }
@@ -522,6 +544,9 @@ progress[aria-valuenow].rejected:before {
   border: solid 2px #427fb3;
   box-shadow: 1px 1px 1px #ccdceb, -1px 1px 1px #ccdceb;
   background: -webkit-radial-gradient(top left, #edf2fa, #ffffff);
+  background: -moz-radial-gradient(top left, #edf2fa, #ffffff);
+  background: -o-radial-gradient(top left, #edf2fa, #ffffff);
+  background: -ms-radial-gradient(top left, #edf2fa, #ffffff);
   background: radial-gradient(at top left at top left, #edf2fa, #ffffff);
   color: #1d2d58;
 }
@@ -530,6 +555,9 @@ progress[aria-valuenow].rejected:before {
   border: solid 2px #548039;
   box-shadow: 1px 1px 1px #d2e1cd, -1px 1px 1px #d2e1cd;
   background: -webkit-radial-gradient(top left, #f1f5f0, #ffffff);
+  background: -moz-radial-gradient(top left, #f1f5f0, #ffffff);
+  background: -o-radial-gradient(top left, #f1f5f0, #ffffff);
+  background: -ms-radial-gradient(top left, #f1f5f0, #ffffff);
   background: radial-gradient(at top left at top left, #f1f5f0, #ffffff);
   color: #496547;
 }
@@ -538,6 +566,9 @@ progress[aria-valuenow].rejected:before {
   border: solid 2px #be0712;
   box-shadow: 1px 1px 1px #feebeb, -1px 1px 1px #feebeb;
   background: -webkit-radial-gradient(top left, #fbe3e3, #ffffff);
+  background: -moz-radial-gradient(top left, #fbe3e3, #ffffff);
+  background: -o-radial-gradient(top left, #fbe3e3, #ffffff);
+  background: -ms-radial-gradient(top left, #fbe3e3, #ffffff);
   background: radial-gradient(at top left at top left, #fbe3e3, #ffffff);
   color: #c52b38;
 }

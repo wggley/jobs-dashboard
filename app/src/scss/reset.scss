@@ -52,6 +52,8 @@ progress[role]     /* polyfill */
 	appearance: none;
 	-moz-appearance: none;
 	-webkit-appearance: none;
+	-o-appearance: none;
+	-ms-appearance: none;
 
 	/* gets rid of default border in Firefox and Opera. */ 
 	border: none;
