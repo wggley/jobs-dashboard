@@ -11,6 +11,7 @@ app.controller('changesController', function($http, $scope) {
     }, function(response) {
       console.log('DEBUG: error acessing data');
     });
+   
 
     crossOver.validateProcessType = function (data) {
       if (data.type == "change") {
@@ -39,18 +40,6 @@ app.controller('changesController', function($http, $scope) {
             createPieChart('pie-chart-test-' + index, crossOver.getTestsChartData(crossOver.data[index].unit_tests));
             createPieChart('pie-chart-functional-' + index, crossOver.getTestsChartData(crossOver.data[index].functional_tests));
         }
-    }
-
-    crossOver.checkMetricsStatus = function(metric_value) {
-      if (metric_value < 50) {
-        return "arrow_red_down";
-      }
-      if (metric_value < 100) {
-        return "arrow_yellow_right";
-      }
-      if (metric_value == 100) {
-        return "arrow_green_up";
-      }
     }
 
     crossOver.checkTestStatus = function(test) {
@@ -110,5 +99,6 @@ app.controller('changesController', function($http, $scope) {
         };
         chart.draw(data, options);
     }
+
 
 });

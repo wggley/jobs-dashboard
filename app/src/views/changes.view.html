@@ -27,6 +27,7 @@
 		<span class="grid-1">{{changes.time_started}}</span>
 		<span class="grid-1">{{changes.status | capitalize}}</span>
 		<div ng-hide="controller.selectedRow == $index" class="fade">
+			<!-- for each? -->
 			<div class="grid-1">
 				<progress class="{{changes.metrics.status}}" max="{{changes.metrics.max}}" ng-attr-value="{{changes.metrics.value}}"></progress>
 			</div>
@@ -44,47 +45,10 @@
 			<div class="grid-4"></div>
 
 			<div class="grid-8">
-				<div class="square metrics {{changes.metrics.status}}">
-					<div class="grid-8 title">Metrics</div>
-					<div class="grid-4">
-						<span class="arrow {{controller.checkMetricsStatus(changes.metrics.test)}}">
-							{{changes.metrics.test}}
-						</span>
-						<span class="grid-8 label">Test</span>
-					</div>
-					<div class="grid-4">
-						<span class="arrow {{controller.checkMetricsStatus(changes.metrics.maintainability)}}">
-							{{changes.metrics.maintainability}}
-						</span>
-						<span class="grid-8 label">Maintainability</span>
-					</div>
-					<div class="grid-4">
-						<span class="arrow {{controller.checkMetricsStatus(changes.metrics.security)}}">
-							{{changes.metrics.security}}
-						</span>
-						<span class="grid-8 label">Security</span>
-					</div>
-					<div class="grid-4">
-						<span class="arrow {{controller.checkMetricsStatus(changes.metrics.workmanship)}}">
-							{{changes.metrics.workmanship}}
-						</span>
-						<span class="grid-8 label">Workmanship</span>
-					</div>
-				</div>
-
-				<div class="square build {{changes.build.status}}">
-					<div class="grid-8 title">Build</div>
-					<div class="grid-4">
-						<span class="computer_blue"></span>
-						<span class="grid-8 label">{{changes.build.debug}}</span>
-					</div>
-					<div class="grid-4">
-						<span class="computer_blue"></span>
-						<span class="grid-8 label">{{changes.build.release}}</span>
-					</div>						
-					<span class="date grid-8">{{changes.build.date}}</span>
-				</div>
-
+				<!-- custom directives -->
+				<metrics status="changes.metrics.status" title="'Metrics'" data="changes.metrics.data"></metrics>
+				<build status="changes.build.status" title="'Build'" data="changes.build.data" date="changes.build.date"> </build>				
+				
 				<div class="square tests {{changes.unit_tests.status}}">
 					<div class="grid-8 title">Unit Test</div>
 					<div class="grid-4 pie-graph" id="pie-chart-test-{{$index}}">
@@ -102,6 +66,7 @@
 						</div>
 					</div>
 				</div>
+			
 
 				<div class="square tests {{changes.functional_tests.status}}">
 					<div class="grid-8 title">Functional Test</div>

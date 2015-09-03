@@ -9,18 +9,19 @@
       "status": "pending",
       "value": 0,
       "max": 100,
-      "test": 64,
-      "maintainability": 53,
-      "security": 64,
-      "workmanship": 72
+      "data": [
+        {"key" : "test", "value": 64},
+        {"key" : "maintainability", "value": 53},
+        {"key" : "security", "value": 64},
+        {"key" : "workmanship", "value": 72}
+      ]
     },
     "build": {
       "status": "pending",
       "value": 0,      
-      "max": 100,
-      "debug": "Debug",
-      "release": "Release",
-      "date" : "10:46am - 4/17/2014"
+      "max": 100,      
+      "date" : "10:46am - 4/17/2014",
+      "data": [ "Debug", "Release"]
     },
     "unit_tests": {
       "status": "pending",
@@ -47,18 +48,19 @@
       "status": "running",
       "value": 65,
       "max": 100,
-      "test": 100,
-      "maintainability": 49,
-      "security": 64,
-      "workmanship": 72
+      "data": [
+        {"key" : "test", "value": 100},
+        {"key" : "maintainability", "value": 44},
+        {"key" : "security", "value": 64},
+        {"key" : "workmanship", "value": 72}
+      ]
     },
     "build": {
       "status": "pending",
       "value": 0,
       "max": 100,
-      "debug": "Debug",
-      "release": "Release",
-      "date" : "10:46am - 4/17/2014"
+      "date" : "10:46am - 4/17/2014",
+      "data": [ "Debug", "Release"]
     },
     "unit_tests": {
       "status": "pending",
@@ -85,18 +87,19 @@
       "status": "rejected",
       "value": 100,
       "max": 100,
-      "test": 64,
-      "maintainability": 53,
-      "security": 64,
-      "workmanship": 72
+      "data": [
+        {"key" : "test", "value": 64},
+        {"key" : "maintainability", "value": 53},
+        {"key" : "security", "value": 64},
+        {"key" : "workmanship", "value": 72}
+      ]
     },
     "build": {
       "status": "complete",
       "value": 100,
       "max": 100,
-      "debug": "Debug",
-      "release": "Release",
-      "date" : "10:46am - 4/17/2014"
+      "date" : "10:46am - 4/17/2014",
+      "data": [ "Debug", "Release"]
     },
     "unit_tests": {
       "status": "complete",
@@ -123,18 +126,19 @@
       "status": "complete",
       "value": 100,
       "max": 100,
-      "test": 100,
-      "maintainability": 100,
-      "security": 64,
-      "workmanship": 72
+      "data": [
+        {"key" : "test", "value": 100},
+        {"key" : "maintainability", "value": 100},
+        {"key" : "security", "value": 64},
+        {"key" : "workmanship", "value": 72}
+      ]
     },
     "build": {
       "status": "complete",
       "value": 100,
       "max": 100,
-      "debug": "Debug",
-      "release": "Release",
-      "date" : "10:46am - 4/17/2014"
+      "date" : "10:46am - 4/17/2014",
+      "data": [ "Debug", "Release"]
     },
     "unit_tests": {
       "status": "complete",
@@ -161,18 +165,19 @@
       "status": "rejected",
       "value": 100,
       "max": 100,
-      "test": 64,
-      "maintainability": 53,
-      "security": 64,
-      "workmanship": 72
+      "data": [
+        {"key" : "test", "value": 64},
+        {"key" : "maintainability", "value": 53},
+        {"key" : "security", "value": 64},
+        {"key" : "workmanship", "value": 72}
+      ]
     },
     "build": {
       "status": "pending",
       "value": 0,
       "max": 100,
-      "debug": "Debug",
-      "release": "Release",
-      "date" : "10:46am - 4/17/2014"
+      "date" : "10:46am - 4/17/2014",
+      "data": [ "Debug", "Release"]
     },
     "unit_tests": {
       "status": "pending",
@@ -199,18 +204,19 @@
       "status": "complete",
       "value": 100,
       "max": 100,
-      "test": 100,
-      "maintainability": 100,
-      "security": 64,
-      "workmanship": 72
+      "data": [
+        {"key" : "test", "value": 100},
+        {"key" : "maintainability", "value": 100},
+        {"key" : "security", "value": 64},
+        {"key" : "workmanship", "value": 72}
+      ]
     },
     "build": {
       "status": "complete",
       "value": 100,
       "max": 100,
-      "debug": "Debug",
-      "release": "Release",
-      "date" : "10:46am - 4/17/2014"
+      "date" : "10:46am - 4/17/2014",
+      "data": [ "Debug", "Release"]
     },
     "unit_tests": {
       "status": "complete",
