@@ -28,16 +28,16 @@
 		<span class="grid-1">{{changes.status | capitalize}}</span>
 		<div ng-hide="controller.selectedRow == $index" class="fade">
 			<div class="grid-1">
-				<progress class="{{changes.metrics.status}}" max="{{changes.metrics.max}}" value="{{changes.metrics.value}}"></progress>
+				<progress class="{{changes.metrics.status}}" max="{{changes.metrics.max}}" ng-attr-value="{{changes.metrics.value}}"></progress>
 			</div>
 			<div class="grid-1">
-				<progress class="{{changes.build.status}}" max="{{changes.build.max}}" value="{{changes.build.value}}"></progress>
+				<progress class="{{changes.build.status}}" max="{{changes.build.max}}" ng-attr-value="{{changes.build.value}}"></progress>
 			</div>
 			<div class="grid-1">
-				<progress class="{{changes.unit_tests.status}}" max="{{changes.unit_tests.max}}" value="{{changes.unit_tests.value}}"></progress>
+				<progress class="{{changes.unit_tests.status}}" max="{{changes.unit_tests.max}}" ng-attr-value="{{changes.unit_tests.value}}"></progress>
 			</div>
 			<div class="grid-1">
-				<progress class="{{changes.functional_tests.status}}" max="{{changes.functional_tests.max}}" value="{{changes.functional_tests.value}}"></progress>
+				<progress class="{{changes.functional_tests.status}}" max="{{changes.functional_tests.max}}" ng-attr-value="{{changes.functional_tests.value}}"></progress>
 			</div>
 		</div>			
 		<div ng-show="controller.selectedRow == $index" class="fade">
@@ -96,7 +96,7 @@
 						<span>tests passed</span>
 					</div>
 					<div class="grid-7 progress-bar">
-						<div class="progress-bar-meter" style="width: {{(changes.unit_tests.value/changes.unit_tests.max)*100}}%">
+						<div class="progress-bar-meter" ng-style="{width: (changes.unit_tests.value/changes.unit_tests.max)*100 + '%'}">
 							<div class="progress-bar-percent">{{(changes.unit_tests.value/changes.unit_tests.max)*100 |number: 0}}%</div>
 							<div class="progress-bar-label">code covered</div>
 						</div>
@@ -114,7 +114,7 @@
 						<span>tests passed</span>
 					</div>
 					<div class="grid-7 progress-bar">
-						<div class="progress-bar-meter" style="width: {{(changes.functional_tests.value/changes.functional_tests.max)*100}}%">
+						<div class="progress-bar-meter" ng-style="{width: (changes.functional_tests.value/changes.functional_tests.max)*100 + '%'}">
 							<div class="progress-bar-percent">{{(changes.functional_tests.value/changes.functional_tests.max)*100 |number: 0}}%</div>
 							<div class="progress-bar-label">code covered</div>
 						</div>

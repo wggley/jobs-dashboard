@@ -6,10 +6,11 @@
 	text-align: center;
 	font-weight: bold;
 	margin-left: 14px;
-	margin-top: 20px;
+	margin-top: 20px;	
+    height: 28px;
 	.progress-bar-meter	{
 		background-color: $progress_bar_test_inner_color;
-		height: 16%;
+		height: 100%;
 		position: relative;				
 	}
 	.progress-bar-percent {

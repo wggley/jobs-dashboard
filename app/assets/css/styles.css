@@ -367,10 +367,11 @@ progress[aria-valuenow]:before {
   font-weight: bold;
   margin-left: 14px;
   margin-top: 20px;
+  height: 28px;
 }
 .progress-bar .progress-bar-meter {
   background-color: #c6dfb5;
-  height: 16%;
+  height: 100%;
   position: relative;
 }
 .progress-bar .progress-bar-percent {
@@ -492,7 +493,7 @@ progress[aria-valuenow].rejected:before {
 }
 
 .row {
-  height: 35px;
+  height: 38px;
   padding-top: 9px;
 }
 
