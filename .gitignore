@@ -44,6 +44,7 @@ Temporary Items
 
 # sass-cache
 .sass-cache
+*.css.map
 
 # node
 node_modules

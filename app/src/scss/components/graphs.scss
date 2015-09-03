@@ -1,0 +1,16 @@
+.pie-graph {
+	padding-left: 10px;
+}
+.pie-percent {
+	font-size: 12px;
+	padding: 25px 0px 0px 16px;
+	.pie-percent-value{
+		font-size: 30px;
+	}
+	.pie-percent-value.ok{
+		color: $pie_percent_ok;
+	}
+	.pie-percent-value.error{
+		color: $pie_percent_error;
+	}
+}

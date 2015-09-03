@@ -1,0 +1,72 @@
+/*progress bar*/
+/*CSS based*/		
+.progress-bar {
+	background-color: $progress_bar_test_outer_color;
+	padding: 0;
+	text-align: center;
+	font-weight: bold;
+	margin-left: 14px;
+	margin-top: 20px;
+	.progress-bar-meter	{
+		background-color: $progress_bar_test_inner_color;
+		height: 16%;
+		position: relative;				
+	}
+	.progress-bar-percent {
+		font-size: 16px;
+		position: absolute;
+	    top: 0;
+	    left: 64px;
+	}
+	.progress-bar-label	{
+		font-size: 10px;
+		position: absolute;
+	    bottom: 0;
+	    left: 0;
+	    width: 166px;
+	}
+}
+
+/* HTML 5*/
+progress[value] {
+	@include border-shadow($progress_bar_border_color, $pending_border_color_shadow);
+}
+/* IE10 */
+progress.complete {
+   	color: $progress_bar_completed_color;
+}
+
+/* Firefox */
+progress.complete::-moz-progress-bar {
+    background: $progress_bar_completed_color;	
+}
+
+/* Chrome */
+progress.complete::-webkit-progress-value{
+	background: $progress_bar_completed_color;
+}
+
+/* Polyfill */
+progress[aria-valuenow].complete:before {
+	background: $progress_bar_completed_color;
+}
+
+/* IE10 */
+progress.rejected {
+   	color: $progress_bar_rejected_color;
+}
+
+/* Firefox */
+progress.rejected::-moz-progress-bar {
+    background: $progress_bar_rejected_color;	
+}
+
+/* Chrome */
+progress.rejected::-webkit-progress-value{
+	background: $progress_bar_rejected_color;
+}
+
+/* Polyfill */
+progress[aria-valuenow].rejected:before {
+	background: $progress_bar_rejected_color;
+}

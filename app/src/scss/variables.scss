@@ -1,36 +1,62 @@
 /*Variables*/
+$min-width: 1195;
+$max-width: 1280;
 
 /*grid*/
 $grid-gutter: 2px; // spacing between columns
 $grid-columns: 8; // columns qty
 $grid-max: 980px; // container width
 
+/*row*/
+$row_compressed: 35px;
+$row_expanded: 265px;
+
+/*square*/
+$square_height: 180px;
+$square_width: 199px;
+
 /*fonts*/
 $font_family: sans-serif;
 $font_size: small;
 
 /*colors*/
+$light_blue : #ccdceb;
+$medium_blue : #427fb3;
+$dark_blue : #1d2d58;
+
+$light_green : #d2e1cd;
+$medium_green : #548039;;
+$dark_green : #496547;
+
+$light_red: #feebeb;
+$medium_red: #be0712;
+$dark_red: #c52b38;
+
+$light_grey: #e7e9ec;
+$medium_grey: #cacccd;
+$dark_grey: #8b8d97;
+
 $background_first_color: #f5f8fb; 
 $background_last_color: #ffffff;
 
-$color_pending : #8b8d97;
-$pending_border_color : #cacccd;
-$pending_border_color_shadow : #e7e9ec;
+$color_pending : $dark_grey;
+$pending_border_color : $medium_grey;
+$pending_border_color_shadow : $light_grey;
 $pending_background_first_color: #edf2fa;
 
-$color_running : #1d2d58;
-$running_border_color : #427fb3;
-$running_border_color_shadow : #ccdceb;
+$color_running : $dark_blue;
+$running_border_color : $medium_blue;
+$running_border_color_shadow : $light_blue;
 $running_background_first_color: $pending_background_first_color;
 
-$color_completed : #496547;
-$completed_border_color : #548039;
-$completed_border_color_shadow : #d2e1cd;
+$color_completed : $dark_green;
+$completed_border_color : $medium_green;
+$completed_border_color_shadow : $light_green;
 $completed_background_first_color: #f1f5f0;
 
-$color_rejected : #c52b38;
-$rejected_border_color : #be0712;
-$rejected_border_color_shadow : #e8bbc0;
+$color_rejected : $dark_red;
+$rejected_border_color 	: $medium_red;
+$rejected_border_color_shadow : $light_red;
 $rejected_background_first_color: #fbe3e3;
 
 $progress_bar_border_color: #c7c7c7;
@@ -38,3 +64,13 @@ $progress_bar_inner_color: #d8d8d8;
 $progress_bar_color: #5e9cd3;
 $progress_bar_completed_color: $completed_border_color;
 $progress_bar_rejected_color: $rejected_border_color;
+
+$progress_bar_test_inner_color: #c6dfb5;
+$progress_bar_test_outer_color: #f6cbae;
+
+$pie_percent_ok : #a5c64a;
+$pie_percent_error: #be8f1e;
+
+$status_square_accepted_color: #fcbc23;
+$status_square_rejected_color: $dark_red;
+$status_square_complete_color: $dark_green;

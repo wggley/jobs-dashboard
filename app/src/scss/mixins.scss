@@ -18,6 +18,11 @@
   text-overflow: ellipsis;
 }
 
+@mixin transition($transition) {
+  -webkit-transition: $transition; /* Safari */
+    transition: width $transition;
+}
+
 @mixin border-shadow($border_color, $shadow_color) {
 	border: solid 2px $border_color;
 	box-shadow: 1px 1px 1px $shadow_color, -1px 1px 1px $shadow_color;
@@ -25,7 +30,16 @@
 
 @mixin border-row($border_color, $shadow_color, $background_first_color, $color) {
 	@include border-shadow($border_color, $shadow_color);	
-	background: -webkit-linear-gradient(left, $background_first_color, $background_last_color);
-	background: linear-gradient(right, $background_first_color, $background_last_color);
+  @include radial-gradient(top left, $background_first_color, $background_last_color);
 	color: $color;
+}
+
+@mixin radial-gradient($direction, $first_color, $last_color) {
+  background: -webkit-radial-gradient($direction, $first_color, $last_color);  
+  background: radial-gradient(at $direction, $first_color, $last_color);
+}
+ 
+@mixin linear-gradient-left($first_color, $last_color) {
+  background: -webkit-linear-gradient(left, $first_color, $last_color);  
+  background: linear-gradient(right, $first_color, $last_color);
 }

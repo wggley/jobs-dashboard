@@ -1,0 +1,99 @@
+.changes {
+	text-align: center;
+	margin: 10px;
+	.header {
+		margin-bottom: 10px;
+	}
+	.build {
+		text-align: left;
+		.icon {
+			position: relative;
+	    	bottom: 7px;	
+		}
+		.machine-name {
+			vertical-align: top;
+	    	padding-left: 10px;
+		}
+		.selected {
+			text-decoration: underline;
+			color: $medium_blue;
+		}
+	}
+	.square.result {
+		background: 0;
+		.button.fuck-you  {
+			position: relative;
+	    	width: 50%;
+		}
+		.to {
+			margin-top: 6px;
+		}
+		.select {
+			color: $medium_blue;
+			border: solid 1px $medium_blue;
+			@include radial-gradient(left top,$light_blue, white);
+		}	
+	}
+}
+
+.row {
+	height: $row_compressed;
+	padding-top: 9px;    	    	
+}
+.compressed {
+	@include transition (0.05s linear all);
+}
+.expanded {
+	height: $row_expanded;
+	@include transition (0.05s linear all);
+}
+.pending {
+	@include border-row($pending_border_color, $pending_border_color_shadow, $pending_background_first_color, $color_pending);	
+}
+.running {
+	@include border-row($running_border_color, $running_border_color_shadow, $running_background_first_color, $color_running);
+}
+.complete, .accepted {
+	@include border-row($completed_border_color, $completed_border_color_shadow, $completed_background_first_color, $color_completed);
+}
+.rejected {
+	@include border-row($rejected_border_color, $rejected_border_color_shadow, $rejected_background_first_color, $color_rejected);	
+}
+
+.metrics {			
+	.label {
+		color: black;
+		font-size: 12px;
+		text-align: center;
+		margin-bottom: 0; 
+	}
+	.arrow {
+		color: black;
+		font-size: 16px;
+		text-align: center;
+		margin-left: 20px; 
+		padding-top: 16px;
+	}
+	.arrow_green_up, .arrow_red_down {
+		@extend .arrow;
+		color: white;
+		padding-top: 24px;
+	}
+}
+
+.build {
+	.label {
+		color: $medium_blue;
+		font-size: 12px;
+		text-align: center;
+		margin-bottom: 0; 
+	}
+	.computer_blue {
+		margin: 14px;
+	}
+	.date {
+		text-align: center;
+		margin-top: 16px;
+		color: black;
+	}
+}

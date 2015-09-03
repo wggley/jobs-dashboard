@@ -1,7 +1,5 @@
-.arrow_green_up, .arrow_red_down, .arrow_yellow_right, 
-.brick_blue, .brick_green, .brick_red, .computer_blue, 
-.computer_green, .computer_grey, .lupa{
-	background: url(../img/sprites.png) no-repeat;
+.arrow_green_up, .arrow_red_down, .arrow_yellow_right, .brick_blue, .brick_green, .brick_red, .computer_blue, .computer_green, .computer_grey, .lupa{
+	background: url(sprites.png) no-repeat;
 }
 
 .arrow_green_up{
@@ -64,9 +62,3 @@
 	height: 16px;
 }
 
-
-span.arrow_green_up, span.arrow_red_down, span.arrow_yellow_right, 
-span.brick_blue, span.brick_green, span.brick_red, span.computer_blue, 
-span.computer_green, span.computer_grey, span.lupa {
-	display: inline-block;
-}

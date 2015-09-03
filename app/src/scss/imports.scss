@@ -1,0 +1,16 @@
+/*main sass imports */
+@import 'reset';
+@import 'variables';
+@import 'sprites';
+@import 'mixins';
+@import 'general';
+
+/*components*/
+@import 'components/animations';
+@import 'components/buttons';
+@import 'components/box';
+@import 'components/progress';
+@import 'components/graphs';
+
+/*pages*/
+@import 'pages/changes';

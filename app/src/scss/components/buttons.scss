@@ -1,0 +1,20 @@
+/*buttons*/
+.button {
+	color: white;
+	background-color: $medium_blue;
+	text-decoration: none;
+	height: 25px;
+	border: solid 1px $medium_grey;
+	width: 65%;
+	position: relative;
+	.lupa {
+		position: absolute;
+		top: 4px;
+		left: 4px;
+	}
+	.button-text {
+		position: absolute;
+		top: 5px;
+		left: 28px;
+	}
+}

@@ -1,0 +1,160 @@
+<section class="changes">
+	<div class="header">
+		<span class="grid-1 build">Changelist / Build</span>
+		<span class="grid-1">Owner</span>
+		<span class="grid-1">Time Started</span>
+		<span class="grid-1">State</span>
+		<span class="grid-1">Metrics</span>
+		<span class="grid-1">Build</span>
+		<span class="grid-1">Unit Test</span>
+		<span class="grid-1">Functional Test</span>
+	</div>
+	
+	<div class="grid-8 row fade {{changes.status}} {{controller.selectedRow == $index ? 'expanded' : 'compressed'}}" ng-repeat="changes in controller.data" ng-click="changes.status != 'pending' ? controller.selectRow($index) : ''">
+		<div ng-if="changes.type == 'change'">
+			<div class="grid-2 build" >
+				<span class="icon {{controller.validateProcessType(changes)}}"></span>
+				<span class="machine-name {{controller.selectedRow == $index ? 'selected': ''}}">{{changes.run}}</span>		
+			</div>
+		</div>
+		<div ng-if="changes.type == 'build'">
+			<div class="grid-1 build">
+				<span class="icon {{controller.validateProcessType(changes)}}"></span>
+				<span class="machine-name {{controller.selectedRow == $index ? 'selected': ''}}">{{changes.run}}</span>		
+			</div>
+			<span class="grid-1">{{changes.owner}}</span>
+		</div>			
+		<span class="grid-1">{{changes.time_started}}</span>
+		<span class="grid-1">{{changes.status | capitalize}}</span>
+		<div ng-hide="controller.selectedRow == $index" class="fade">
+			<div class="grid-1">
+				<progress class="{{changes.metrics.status}}" max="{{changes.metrics.max}}" value="{{changes.metrics.value}}"></progress>
+			</div>
+			<div class="grid-1">
+				<progress class="{{changes.build.status}}" max="{{changes.build.max}}" value="{{changes.build.value}}"></progress>
+			</div>
+			<div class="grid-1">
+				<progress class="{{changes.unit_tests.status}}" max="{{changes.unit_tests.max}}" value="{{changes.unit_tests.value}}"></progress>
+			</div>
+			<div class="grid-1">
+				<progress class="{{changes.functional_tests.status}}" max="{{changes.functional_tests.max}}" value="{{changes.functional_tests.value}}"></progress>
+			</div>
+		</div>			
+		<div ng-show="controller.selectedRow == $index" class="fade">
+			<div class="grid-4"></div>
+
+			<div class="grid-8">
+				<div class="square metrics {{changes.metrics.status}}">
+					<div class="grid-8 title">Metrics</div>
+					<div class="grid-4">
+						<span class="arrow {{controller.checkMetricsStatus(changes.metrics.test)}}">
+							{{changes.metrics.test}}
+						</span>
+						<span class="grid-8 label">Test</span>
+					</div>
+					<div class="grid-4">
+						<span class="arrow {{controller.checkMetricsStatus(changes.metrics.maintainability)}}">
+							{{changes.metrics.maintainability}}
+						</span>
+						<span class="grid-8 label">Maintainability</span>
+					</div>
+					<div class="grid-4">
+						<span class="arrow {{controller.checkMetricsStatus(changes.metrics.security)}}">
+							{{changes.metrics.security}}
+						</span>
+						<span class="grid-8 label">Security</span>
+					</div>
+					<div class="grid-4">
+						<span class="arrow {{controller.checkMetricsStatus(changes.metrics.workmanship)}}">
+							{{changes.metrics.workmanship}}
+						</span>
+						<span class="grid-8 label">Workmanship</span>
+					</div>
+				</div>
+
+				<div class="square build {{changes.build.status}}">
+					<div class="grid-8 title">Build</div>
+					<div class="grid-4">
+						<span class="computer_blue"></span>
+						<span class="grid-8 label">{{changes.build.debug}}</span>
+					</div>
+					<div class="grid-4">
+						<span class="computer_blue"></span>
+						<span class="grid-8 label">{{changes.build.release}}</span>
+					</div>						
+					<span class="date grid-8">{{changes.build.date}}</span>
+				</div>
+
+				<div class="square tests {{changes.unit_tests.status}}">
+					<div class="grid-8 title">Unit Test</div>
+					<div class="grid-4 pie-graph" id="pie-chart-test-{{$index}}">
+					</div>
+					<div class="grid-4 pie-percent">
+						<span class="pie-percent-value {{controller.checkTestStatus(changes.unit_tests)}}">
+							{{controller.checkTestPercentStatus(changes.unit_tests) | number: 0}}%
+						</span>
+						<span>tests passed</span>
+					</div>
+					<div class="grid-7 progress-bar">
+						<div class="progress-bar-meter" style="width: {{(changes.unit_tests.value/changes.unit_tests.max)*100}}%">
+							<div class="progress-bar-percent">{{(changes.unit_tests.value/changes.unit_tests.max)*100 |number: 0}}%</div>
+							<div class="progress-bar-label">code covered</div>
+						</div>
+					</div>
+				</div>
+
+				<div class="square tests {{changes.functional_tests.status}}">
+					<div class="grid-8 title">Functional Test</div>
+					<div class="grid-4 pie-graph" id="pie-chart-functional-{{$index}}">
+					</div>
+					<div class="grid-4 pie-percent">
+						<span class="pie-percent-value {{controller.checkTestStatus(changes.functional_tests)}}">
+							{{controller.checkTestPercentStatus(changes.functional_tests) | number: 0}}%
+						</span>
+						<span>tests passed</span>
+					</div>
+					<div class="grid-7 progress-bar">
+						<div class="progress-bar-meter" style="width: {{(changes.functional_tests.value/changes.functional_tests.max)*100}}%">
+							<div class="progress-bar-percent">{{(changes.functional_tests.value/changes.functional_tests.max)*100 |number: 0}}%</div>
+							<div class="progress-bar-label">code covered</div>
+						</div>
+					</div>
+				</div>
+
+				<div class="square result" ng-if="changes.status != 'running'">
+					<span class="grid-8 row title">Result:</span>
+					
+					<div ng-if="changes.status == 'accepted'">
+						<span class="grid-8 status">Change {{ changes.status | capitalize}}</span>
+						<span class="grid-8 info">Auto-Merged</span>
+						<a href="#" class="grid-8 button">
+							<span class="lupa"></span>
+							<span class="button-text">Merged Build</span>
+						</a>
+					</div>
+
+					<div ng-if="changes.status == 'rejected'">
+						<span class="grid-8 status">Change {{ changes.status | capitalize}}</span>
+						<span class="grid-8 info">Metrics Reduction</span>
+						<a href="#" class="grid-8 button">
+							<span class="button-text">Find Issues</span>
+						</a>
+					</div>
+					
+					<div ng-if="changes.status == 'complete'">
+						<span class="grid-8 info">{{ changes.status | capitalize}}</span>
+						<a href="#" class="grid-4 button fuck-you">
+							<span class="button-text">Deploy</span>
+						</a>
+						<span class="grid-4 to">to:</span>
+						<select class="grid-4 select">
+							<option value="production">Production</option>
+							<option value="test">Test</option>
+							<option value="development">Development</option>								
+						</select>
+					</div>
+				</div>
+			</div>				
+		</div>
+	</div>
+</section>		

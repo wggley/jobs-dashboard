@@ -47,8 +47,8 @@
       "status": "running",
       "value": 65,
       "max": 100,
-      "test": 64,
-      "maintainability": 53,
+      "test": 100,
+      "maintainability": 49,
       "security": 64,
       "workmanship": 72
     },
@@ -62,10 +62,10 @@
     },
     "unit_tests": {
       "status": "pending",
-      "value": 0,
+      "value": 76,
       "max": 100,
-      "ok": 142,
-      "error": 10
+      "ok": 200,
+      "error": 100
     },
     "functional_tests": {
       "status": "pending",
@@ -102,8 +102,8 @@
       "status": "complete",
       "value": 100,
       "max": 100,
-      "ok": 142,
-      "error": 10
+      "ok": 80,
+      "error": 70
     },
     "functional_tests": {
       "status": "complete",
@@ -123,8 +123,8 @@
       "status": "complete",
       "value": 100,
       "max": 100,
-      "test": 64,
-      "maintainability": 53,
+      "test": 100,
+      "maintainability": 100,
       "security": 64,
       "workmanship": 72
     },
@@ -138,10 +138,10 @@
     },
     "unit_tests": {
       "status": "complete",
-      "value": 100,
+      "value": 23,
       "max": 100,
-      "ok": 142,
-      "error": 10
+      "ok": 50,
+      "error": 100
     },
     "functional_tests": {
       "status": "complete",
@@ -178,8 +178,8 @@
       "status": "pending",
       "value": 0,
       "max": 100,
-      "ok": 142,
-      "error": 10
+      "ok": 75,
+      "error": 40
     },
     "functional_tests": {
       "status": "pending",
@@ -199,8 +199,8 @@
       "status": "complete",
       "value": 100,
       "max": 100,
-      "test": 64,
-      "maintainability": 53,
+      "test": 100,
+      "maintainability": 100,
       "security": 64,
       "workmanship": 72
     },
@@ -216,8 +216,8 @@
       "status": "complete",
       "value": 100,
       "max": 100,
-      "ok": 142,
-      "error": 10
+      "ok": 56,
+      "error": 42
     },
     "functional_tests": {
       "status": "complete",

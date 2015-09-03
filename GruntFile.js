@@ -31,7 +31,7 @@ module.exports = function(grunt) {
 		  assets: '<%= project.app %>/assets',
 		  src: '<%= project.app %>/src',
 		  css: [
-		    '<%= project.src %>/scss/main.scss'
+		    '<%= project.src %>/scss/imports.scss'
 		  ],
 		  js: [
 		    '<%= project.src %>/js/*.js'
