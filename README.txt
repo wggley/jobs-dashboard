@@ -1,6 +1,5 @@
-1) Job done:	
-App structure:
-/(aka root folder)
+A Angular jobs dashboard.
+
 - Gruntfile.js and package.json for NPM and Grunt (for SASS/Compass)
 - README.txt - this file you are reading
 - app (folder)
