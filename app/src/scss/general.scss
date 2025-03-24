@@ -19,8 +19,6 @@ body {
 	background: radial-gradient(at top left, $background_first_color, $background_last_color);
 	font-family: $font_family;
 	font-size: $font_size;
-  min-width: $min-width;
-  max-width: $max-width;
 }
 
 progress[value] {
