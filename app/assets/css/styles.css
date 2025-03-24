@@ -72,8 +72,7 @@ progress[role] {
 
 /* Polyfill */
 progress[role]:after {
-  background-image: none;
-  /* removes default background from polyfill */
+  background-image: none; /* removes default background from polyfill */
 }
 
 /* Ensure fallback text doesn't appear in polyfill */
@@ -83,7 +82,6 @@ progress[role] strong {
 
 /*Variables*/
 /*grid*/
-/*row*/
 /*square*/
 /*fonts*/
 /*colors*/
@@ -163,7 +161,7 @@ span.computer_green, span.computer_grey, span.lupa {
   box-sizing: border-box;
 }
 
-[class*="grid-"] {
+[class*=grid-] {
   float: left;
   padding: 0 2px;
   margin-bottom: 10px;
@@ -203,7 +201,7 @@ span.computer_green, span.computer_grey, span.lupa {
 
 body {
   background: -webkit-radial-gradient(top left, #f5f8fb, #ffffff);
-  background: radial-gradient(at top left at top left, #f5f8fb, #ffffff);
+  background: radial-gradient(at top left, #f5f8fb, #ffffff);
   font-family: sans-serif;
   font-size: small;
   min-width: 1195;
@@ -219,10 +217,8 @@ progress[value] {
 }
 
 progress,
-progress[role][aria-valuenow] {
-  /* Polyfill */
-  background: #d8d8d8 !important;
-  /* !important is needed by the polyfill */
+progress[role][aria-valuenow] { /* Polyfill */
+  background: #d8d8d8 !important; /* !important is needed by the polyfill */
 }
 
 /* Chrome */
@@ -328,7 +324,7 @@ progress[aria-valuenow]:before {
   background: -moz-radial-gradient(top left, #d2e1cd, white);
   background: -o-radial-gradient(top left, #d2e1cd, white);
   background: -ms-radial-gradient(top left, #d2e1cd, white);
-  background: radial-gradient(at top left at top left, #d2e1cd, #ffffff);
+  background: radial-gradient(at top left, #d2e1cd, white);
 }
 
 .square.rejected {
@@ -337,7 +333,7 @@ progress[aria-valuenow]:before {
   background: -moz-radial-gradient(top left, #feebeb, white);
   background: -o-radial-gradient(top left, #feebeb, white);
   background: -ms-radial-gradient(top left, #feebeb, white);
-  background: radial-gradient(at top left at top left, #feebeb, #ffffff);
+  background: radial-gradient(at top left, #feebeb, white);
 }
 
 .square.result {
@@ -504,11 +500,10 @@ progress[aria-valuenow].rejected:before {
   background: -moz-radial-gradient(left top, #ccdceb, white);
   background: -o-radial-gradient(left top, #ccdceb, white);
   background: -ms-radial-gradient(left top, #ccdceb, white);
-  background: radial-gradient(at left top at left top, #ccdceb, #ffffff);
+  background: radial-gradient(at left top, #ccdceb, white);
 }
 
 .row {
-  height: 38px;
   padding-top: 9px;
 }
 
@@ -521,7 +516,6 @@ progress[aria-valuenow].rejected:before {
 }
 
 .expanded {
-  height: 265px;
   -webkit-transition: 0.05s linear all;
   -moz-transition: 0.05s linear all;
   -o-transition: 0.05s linear all;
@@ -536,7 +530,7 @@ progress[aria-valuenow].rejected:before {
   background: -moz-radial-gradient(top left, #edf2fa, #ffffff);
   background: -o-radial-gradient(top left, #edf2fa, #ffffff);
   background: -ms-radial-gradient(top left, #edf2fa, #ffffff);
-  background: radial-gradient(at top left at top left, #edf2fa, #ffffff);
+  background: radial-gradient(at top left, #edf2fa, #ffffff);
   color: #8b8d97;
 }
 
@@ -547,7 +541,7 @@ progress[aria-valuenow].rejected:before {
   background: -moz-radial-gradient(top left, #edf2fa, #ffffff);
   background: -o-radial-gradient(top left, #edf2fa, #ffffff);
   background: -ms-radial-gradient(top left, #edf2fa, #ffffff);
-  background: radial-gradient(at top left at top left, #edf2fa, #ffffff);
+  background: radial-gradient(at top left, #edf2fa, #ffffff);
   color: #1d2d58;
 }
 
@@ -558,7 +552,7 @@ progress[aria-valuenow].rejected:before {
   background: -moz-radial-gradient(top left, #f1f5f0, #ffffff);
   background: -o-radial-gradient(top left, #f1f5f0, #ffffff);
   background: -ms-radial-gradient(top left, #f1f5f0, #ffffff);
-  background: radial-gradient(at top left at top left, #f1f5f0, #ffffff);
+  background: radial-gradient(at top left, #f1f5f0, #ffffff);
   color: #496547;
 }
 
@@ -569,7 +563,7 @@ progress[aria-valuenow].rejected:before {
   background: -moz-radial-gradient(top left, #fbe3e3, #ffffff);
   background: -o-radial-gradient(top left, #fbe3e3, #ffffff);
   background: -ms-radial-gradient(top left, #fbe3e3, #ffffff);
-  background: radial-gradient(at top left at top left, #fbe3e3, #ffffff);
+  background: radial-gradient(at top left, #fbe3e3, #ffffff);
   color: #c52b38;
 }
 
@@ -605,3 +599,5 @@ progress[aria-valuenow].rejected:before {
   margin-top: 16px;
   color: black;
 }
+
+/*# sourceMappingURL=styles.css.map */

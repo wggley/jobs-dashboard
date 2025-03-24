@@ -46,8 +46,7 @@ module.exports = function(grunt) {
 		  dev: {
 		    options: {
 		    	style: 'expanded',
-		    	compass: true,
-				sourcemap: 'none'
+		    	compass: false
 		    },
 		    files: {
 		      '<%= project.assets %>/css/styles.css': '<%= project.css %>'
@@ -56,8 +55,7 @@ module.exports = function(grunt) {
 		  dist: {
 		    options: {
 		    	style: 'compressed',
-		    	compass: true,
-				sourcemap: 'none'
+		    	compass: false
 		    },
 		    files: {
 		      '<%= project.assets %>/css/styles.css': '<%= project.css %>'

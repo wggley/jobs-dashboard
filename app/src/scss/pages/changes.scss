@@ -37,14 +37,12 @@
 }
 
 .row {
-	height: $row_compressed;
 	padding-top: 9px;
 }
 .compressed {
 	@include transition (0.05s linear all);
 }
 .expanded {
-	height: $row_expanded;
 	@include transition (0.05s linear all);
 }
 .pending {
